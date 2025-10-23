@@ -92,6 +92,40 @@ a {
   font-weight: normal;
   opacity: 0.7; }
 
+/* --- Hello World animations --- */
+.hello-animate {
+  display: inline-block;
+  animation: hello-pop 800ms ease-out 1, hello-glow 4s ease-in-out infinite 800ms;
+}
+
+@keyframes hello-pop {
+  0% { transform: scale(0.9); opacity: 0; }
+  60% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+@keyframes hello-glow {
+  0%, 100% { text-shadow: 0 0 0px rgba(255,255,255,0.0); }
+  50% { text-shadow: 0 0 12px rgba(255,255,255,0.6); }
+}
+
+.hello-wave {
+  display: inline-block;
+  transform-origin: 70% 70%;
+  animation: wave-hand 2.2s ease-in-out infinite;
+}
+
+@keyframes wave-hand {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
 @media screen and (min-width: 64em) {
   .project-tagline {
     font-size: 1.25rem; } }
