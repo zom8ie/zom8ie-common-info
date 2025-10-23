@@ -126,36 +126,15 @@ a {
   100% { transform: rotate(0deg); }
 }
 
-.fire-bg {
+/* Pixel fire canvas */
+.pixel-fire {
   position: fixed;
   inset: 0;
-  pointer-events: none;
+  width: 100vw;
+  height: 100vh;
   z-index: 0;
-}
-
-.fire-bg::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(1200px 600px at 50% 110%, rgba(255, 127, 80, 0.18), transparent),
-              radial-gradient(800px 400px at 10% 120%, rgba(255, 69, 0, 0.18), transparent),
-              radial-gradient(900px 500px at 90% 120%, rgba(255, 140, 0, 0.18), transparent);
-  filter: blur(10px);
-}
-
-.flame {
-  position: absolute;
-  bottom: -5vh;
-  font-size: var(--size, 24px);
-  animation: flame-float var(--dur, 7s) ease-in infinite;
-  animation-delay: var(--delay, 0s);
-}
-
-@keyframes flame-float {
-  0% { transform: translateY(0) translateX(0) scale(1); opacity: 0; }
-  10% { opacity: 0.9; }
-  50% { transform: translateY(-40vh) translateX(-6px) scale(1.08); }
-  100% { transform: translateY(-90vh) translateX(10px) scale(0.96); opacity: 0; }
+  pointer-events: none;
+  image-rendering: pixelated;
 }
 
 /* --- Cute floating background (hearts, flowers, unicorns) --- */
