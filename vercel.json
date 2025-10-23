@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "name": "zom8ie-common-info",
+  "public": true,
+  "framework": null,
+  "builds": [
+    { "src": "index.html", "use": "@vercel/static" },
+    { "src": "stylesheets/**/*", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/$1" }
+  ]
+}
